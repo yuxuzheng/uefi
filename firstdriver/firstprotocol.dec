@@ -1,0 +1,10 @@
+[Defines]
+  DEC_SPECIFICATION = 0x00010005
+  PACKAGE_NAME      = firstdriver
+  PACKAGE_GUID      = f3a4e3d1-93de-11e4-b4fe-74d435dec62b
+  PACKAGE_VERSION   = 1.0
+[Includes]
+  Include
+[LibraryClasses]
+[Protocols]
+  gEfiMyFirstProtocolGuid =  {0xcd33ac22, 0x5ee3, 0x487d, { 0x91, 0x4f, 0xff, 0xfe, 0x64, 0xcd, 0xa, 0x3a } }

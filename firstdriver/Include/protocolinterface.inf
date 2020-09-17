@@ -1,0 +1,29 @@
+
+[Defines]
+  INF_VERSION                   = 0x00010005
+  BASE_NAME                     = ProtocolInterface
+  FILE_GUID                     = 3E8FFF1F-2483-44DD-A968-A21485CEE597
+  MODULE_TYPE                   = DXE_DRIVER
+  VERSION_STRING                = 1.0
+  ENTRY_POINT                   =MyProtocolEntry
+
+[Sources]
+  locateprotocol.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MyPkg/firstdriver/firstprotocol.dec
+
+[LibraryClasses]
+ DebugLib
+ UefiBootServicesTableLib
+ UefiDriverEntryPoint
+ UefiLib
+
+[Protocols]
+  gEfiMyFirstProtocolGuid
+
+[Depex]
+  TRUE
+
+

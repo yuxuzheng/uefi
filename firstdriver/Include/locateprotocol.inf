@@ -1,0 +1,26 @@
+[Defines]
+ INF_VERSION     		=   0x00010006
+ BASE_NAME       		=   LocateHelloWorldProtocol
+ FILE_GUID       		=   3E898A21-BCB3-4A0F-8559-3942872216D1
+ VERSION_STRING  	=   0.1
+ MODULE_TYPE     		=   DXE_DRIVER
+ ENTRY_POINT     		=   InitLocateHelloWorldProtocol
+
+[Sources]
+ locateprotocol.c
+
+[Packages]
+ MdePkg/MdePkg.dec
+ MyPkg/firstdriver/firstprotocol.dec
+
+[LibraryClasses]
+ DebugLib
+ UefiBootServicesTableLib
+ UefiDriverEntryPoint
+ UefiLib
+
+[Protocols]
+ gEfiMyFirstProtocolGuid
+
+[Depex]
+ gEfiMyFirstProtocolGuid
